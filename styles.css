@@ -1,0 +1,188 @@
+/*
+* Full Screen mode and full sceen trigger icons
+*/
+
+/* By default do not display the full screen button. */
+.local-fullscreen,
+.local-fullscreen-padding {
+    display: none;
+}
+
+/* Full screen mode should have no effect below this resolution and not display during printing. */
+@media not print and (min-width: 769px) {
+    .local-fullscreen-padding {
+        display: block;
+        float: right;
+        padding-left: 20px;
+    }
+
+    .pagelayout-incourse .local-fullscreen-padding,
+    .pagelayout-coursecategory .local-fullscreen-padding {
+        padding-right: 3.5rem;
+    }
+
+    .tempory_margin_zero {
+        margin-left: 0px !important;
+        margin-top: 10px !important;
+    }
+
+    .local-fullscreen {
+        right: -5px;
+        top: 76px;
+        background: url([[pix:local_fullscreen|fullscreen]]) no-repeat center center;
+        background-color: #fefefe;
+        background-size: 20px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.28);
+        -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.28);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.28);
+        cursor: pointer;
+        display: block;
+        float: right;
+        padding: 20px;
+        position: fixed;
+        -webkit-transition: 0.25s;
+        -moz-transition: 0.25s;
+        -o-transition: 0.25s;
+        transition: 0.25s;
+        z-index: 1000001;
+    }
+
+    .local-fullscreen:hover {
+        background-color: #fff;
+        -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    }
+
+    /** When in fullscreen mode. */
+    .fullscreenmode .local-fullscreen {
+        background: url([[pix:local_fullscreen|fullscreen_collapse]]) no-repeat center center;
+    }
+
+    /** When the page is scrolled down */
+    .local-fullscreen.float {
+        background-color: #f9fafc;
+        float: none;
+        filter: alpha(opacity=80);
+        opacity: 1;
+        position: fixed;
+        right: 2%;
+        top: 70px;
+        z-index: 1001;
+    }
+}
+
+/* Full screen mode should have no effect below this resolution. */
+@media (min-width: 769px) {
+    /* Styles for when full screen mode is active. */
+    .fullscreenmode.row-fluid .span4 {
+        width: 50%;
+    }
+    html .fullscreenmode,
+    body .fullscreenmode {
+        height: inherit;
+    }
+    .fullscreenmode .pull-right[class*="span"],
+    .fullscreenmode .row-fluid .pull-right[class*="span"] {
+        float: none;
+        clear: both;
+    }
+    .fullscreenmode .push {
+        display: none;
+    }
+    .fullscreenmode .row-fluid .span9,
+    .fullscreenmode .row-fluid .span8 {
+        width: 100%;
+    }
+    .fullscreenmode .container-fluid {
+        min-width: 97.5%;
+    }
+
+    .fullscreenmode .empty-region-side-post.used-region-side-pre #region-main,
+    .fullscreenmode .jsenabled.docked-region-side-post.used-region-side-pre #region-main {
+        display: none;
+    }
+
+    .fullscreenmode #region-main-box,
+    .fullscreenmode #page-content.blocks-post.blocks-pre #region-main-box,
+    .fullscreenmode #page-content.blocks-pre #region-main-box,
+    .fullscreenmode #page-content.blocks-post #region-main-box {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .fullscreenmode #region-main,
+    .fullscreenmode #region-main.has-blocks,
+    .fullscreenmode #region-main.span8.pull-right,
+    .fullscreenmode #region-main-settings-menu,
+    .fullscreenmode #region-main-settings-menu.has-blocks,
+    .fullscreenmode.jsenabled.has_dock.has_dock_left_vertical.docked-region-side-post #region-main.span8.pull-right,
+    .fullscreenmode.empty-region-side-post.used-region-side-pre #region-main.span8,
+    .fullscreenmode.jsenabled.docked-region-side-post.used-region-side-pre #region-main.span8 {
+        width: 100%;
+    }
+
+    .fullscreenmode #block-region-side-post,
+    .fullscreenmode #block-region-side-pre {
+        display: none;
+    }
+    .fullscreenmode .container-fluid {
+        max-width: 100%;
+    }
+
+    .fullscreenmode.has_dock.has_dock_left_vertical #region-main {
+        min-width: 97.5%;
+    }
+
+    /* Expand the content area in full screen mode */
+    .pagelayout-course.fullscreenmode .navbar-inner,
+    .pagelayout-incourse.fullscreenmode .navbar-inner,
+    .pagelayout-course.fullscreenmode .container-fluid,
+    .pagelayout-incourse.fullscreenmode .container-fluid {
+        max-width: 100%;
+    }
+
+    /* Remove block docking area. */
+    body.has_dock.fullscreenmode #dock {
+        display: none;
+    }
+
+    body.has_dock.fullscreenmode #page {
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 2000px) {
+    .fullscreenmode .container-fluid {
+        min-width: 98%;
+    }
+}
+
+@media (max-width: 1597px) {
+    .fullscreenmode .container-fluid {
+        min-width: 97%;
+    }
+}
+
+@media (max-width: 1333px) {
+    .fullscreenmode .container-fluid {
+        min-width: 96%;
+    }
+}
+
+@media (max-width: 1005px) {
+    .fullscreenmode .container-fluid {
+        min-width: 95%;
+    }
+}
+
+@media (max-width: 807px) {
+    .fullscreenmode .container-fluid {
+        min-width: 94%;
+    }
+}
