@@ -103,7 +103,7 @@
 
     .fullscreenmode .empty-region-side-post.used-region-side-pre #region-main,
     .fullscreenmode .jsenabled.docked-region-side-post.used-region-side-pre #region-main {
-        display: none;
+        display: block !important;
     }
 
     .fullscreenmode #region-main-box,
@@ -129,7 +129,7 @@
 
     .fullscreenmode #block-region-side-post,
     .fullscreenmode #block-region-side-pre {
-        display: none;
+        display: block !important;
     }
     .fullscreenmode .container-fluid {
         max-width: 100%;
