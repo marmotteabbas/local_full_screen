@@ -112,7 +112,7 @@
     .fullscreenmode #page-content.blocks-post #region-main-box {
         width: 100%;
         flex: 0 0 100%;
-        max-width: 100%;
+    /*    max-width: 100%; */
         padding: 0 1rem 1rem 1rem;
     }
 
